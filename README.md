@@ -1,4 +1,4 @@
-<h1 align="center">Craigslist Scrapper</h1>
+<h1 align="center">Craigslist 🚗 Scrapper</h1>
 <p>
 </p>
 
