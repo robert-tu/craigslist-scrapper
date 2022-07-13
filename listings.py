@@ -18,15 +18,15 @@ html_soup = BeautifulSoup(response.text, 'html.parser')
 
 # find total posts
 results_total = int(html_soup.find('span', class_ = 'totalcount').text)
-results_top20 = int(results_total / 4)
-print("today's total listings: " + str(results_top20))
+results_top = int(results_total / 15)
+print("today's total listings: " + str(results_top))
 
 def get_listings():
     # loop through available listings
-    pages = np.arange(0, results_top20 + 1, 120)
+    pages = np.arange(0, results_top + 1, 120)
 
     i = 0
-    total_pages = math.ceil(int(results_top20 / 120))
+    total_pages = math.ceil(int(results_top / 120))
 
     # arrays to hold listings
     post_times = []

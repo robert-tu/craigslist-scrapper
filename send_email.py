@@ -3,13 +3,13 @@ from smtplib import SMTP
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-def send_mail(body):
+def send_mail(body, counts):
     user = "you@gmail.com"
     password = "******"
 
     print("preparing email content...\n")
     message = MIMEMultipart()
-    message['Subject'] = "Today's Craigslist Car Listings (Newest 20%)"
+    message['Subject'] = "Today's Craigslist Car Listings (Newest " + str(counts) + ")"
     message['From'] = user
     message['To'] = user
 
